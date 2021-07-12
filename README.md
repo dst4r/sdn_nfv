@@ -18,4 +18,4 @@ What things are needed to install the software and how to install them. For now,
 
 ## Authors
 
-* **Deepankar Malhotra** - *Initial work* - [YourWebsite](https://example.com/)
+* **Deepankar Malhotra** - [YourWebsite](https://example.com/)

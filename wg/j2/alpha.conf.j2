@@ -1,0 +1,28 @@
+[Interface]
+# Name = >>> ALPHA <<<
+# Address = 10.64.0.1
+# SaveConfig = true
+# MTU = 1500
+PrivateKey = {{ env("WG_ALPHA_KEY") }}
+ListenPort = 51820
+
+[Peer]
+# Name = bravo - KVM server with a local slash 16: 10.65.0.0/26
+PublicKey = {{ env("WG_BRAVO_PUB") }}
+AllowedIPs = 10.65.0.0/16
+Endpoint = {{ env("WG_BRAVO_IP") }}:51820
+PersistentKeepalive = 25
+
+[Peer]
+# name = charlie - KVM server with a local slash 16: 10.66.0.0/26
+PublicKey = {{ env("WG_CHARLIE_PUB") }}
+AllowedIPs = 10.66.0.0/16
+Endpoint = {{ env("WG_CHARLIE_IP") }}:51820
+PersistentKeepalive = 25
+
+[Peer]
+# Name = bchd
+PublicKey = {{ env("WG_BCHD_PUB") }}
+AllowedIPs = 10.67.0.1/32
+Endpoint = {{ env("WG_BCHD_IP") }}:51820
+PersistentKeepalive = 25
